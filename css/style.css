@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+}
+
+body:before{
+    padding: 1rem;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    opacity: 0.2;
+    z-index: -10;
+}
+
+.navbar-logo-anim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test{
+    font-size: 32px;
+    gap:2rem;
+    line-height: 35px;
+    height:35px;
+    font-family: 'bebas neue';
+    overflow: hidden;
+}
+
+.test ul {
+    list-style: none;
+    padding-left: 10px;
+    animation: cambiar 1s infinite;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 15px;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 32px;
+}
+
+.logo {
+    width: 80px;
+}
+
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .list a:hover{
+    background-color: black;
+    color:white;
+    opacity: 80%;
+    border-radius: 5px;
+}
+
+.navbar .logo:hover{
+    background-color: none;
+}
+
+
+.index{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.centro{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.centro a{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    width: 20%;
+    justify-content: stretch;
+    transition: .5s ease;
+    padding-bottom: 3rem;
+}
+ 
+.centro a img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.centro a p{
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    position: absolute;
+    font-family: 'Bebas Neue';
+    color: brown;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.centro a:hover{
+    width: 50%;
+    cursor: crosshair;
+    filter: contrast(130%);
+    box-shadow: 10px 10px 10px black;
+}
+
+.videos{
+display: flex;
+justify-content: center;
+}
+
+.videos iframe{
+    padding: 10px;
+    background-color: black;
+    border-radius: .3rem;
+    height: 60vh;
+}
+
+.videos iframe:hover{
+    display: flex;
+    transition: 1.2s;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_media{
+    gap: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: sticky; 
+    bottom: 0;   
+}
+
+.social_media img{
+    height: 40px;
+}
+
+footer{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario{
+    background: #24303c;
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    gap: 2rem;
+}
+
+.formulario h4, .formulario p{
+    font-size: 32px;
+}
+
+.boton{
+    display: flex;
+    width: 100%;
+    background: #24303c;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.texto{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;;
+}
+
+.formulario p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.formulario a{
+    color:white;
+    text-decoration: none;
+}
+.formulario a:hover{
+    text-decoration: underline;
+}
+
+.formulario .enviar{
+    padding-top: 2rem;
+    margin-top: 15px;
+    width: 100%;
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1000px){
+    .centro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .centro a {
+        width: 80%;
+        
+    }
+    .navbar a{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .test{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .social_media{
+        border-top: none;
+        gap: 0.5rem;
+        flex-direction: column;
+        position:fixed; 
+        bottom: 30%;
+        right: 0%;
+    }
+    
+    .formulario p{
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+   
+    .list {
+        align-items: center;
+        padding: 20px;
+        gap:15px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .list a:hover{
+        background-color: black;
+        color: white;
+        opacity: 70%;
+        font-size: 24px;
+        font-weight: lighter;
+    }
+
+    .centro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .centro a {
+        width: 70%;
+    }
+
+
+    .social_media{ 
+        bottom: 62%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .test{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    
+    .formulario h4, .formulario p{
+        font-size: 24px;
+    }
+    
+    .boton{
+        padding: 16px;
+    }
+    
+    .formulario a{
+        color:white;
+        text-decoration: none;
+    }
+    .formulario a:hover{
+        text-decoration: underline;
+    }
+    .formulario p{
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+}
+
+@keyframes cambiar{
+    0%{margin-top: -32px;}
+    12.5%{margin-top: -24px;}
+    25%{margin-top: -16px;}
+    47.5%{margin-top: -8px;}
+    50%{margin-top: 0px;}
+    72.5%{margin-top: 8px;}
+    75%{margin-top: 16px;}
+    87.5%{margin-top: 24px;}
+    100%{margin-top: 32px;}
+
+}
+
